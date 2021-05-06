@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F7F7F7</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="red">#FF0000</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="gray">#808080</color>
+    <color name="olive">#808000</color>
+    <color name="purple">#800080</color>
+    <color name="maroon">#800000</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="lime">#00FF00</color>
+    <color name="teal">#008080</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="navy">#000080</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#80FFFFFF</color>
+
+    <!-- Text colors -->
+    <color name="gray_subtitle">#898989</color>
+    <color name="dark_gray">#606060</color>
+    <color name="dark_black">#333333</color>
+    <color name="text_general">#606060</color>
+
+    <!-- RHS Colors -->
+    <color name="green_rhs">#BE209543</color>
+    <color name="green_rhs_50_opacity">#80209543</color>
+    <color name="light_green_rhs">#33ab57</color>
+    <color name="light_green_rhs_50_opacity">#8033ab57</color>
+
+
+    <!-- Appointment colors -->
+    <color name="light_blue">#B5D2DE</color>
+    <color name="red_rhs">#E70404</color>
+    <color name="light_gray">#DBDBDB</color>
+
+    <!-- Questionnaire colors -->
+    <color name="green_status">#F8C6FFB8</color>
+    <color name="brown_status">#c06b00</color>
+    <color name="blue_status">#117aad</color>
+    <color name="green_button">#57B562</color>
+
+    <!-- Perfil360 colors -->
+    <color name="blue_TextImage">#1976B3</color>
+    <color name="blue_camera">#437695</color>
+    <color name="blue_icono">#83B6D5</color>
+    <color name="orange1">#fcb0ad</color>
+    <color name="orange2">#f2dede</color>
+    <color name="green1">#98d7ad</color>
+    <color name="green2">#dff0d8</color>
+    <color name="profile_icon_buttons">#555555</color>
+
+    <color name="blue_zentros">#1994A4</color>
+    <color name="orange_btn">#BB650E</color>
+    <color name="fondo">#EDEDED</color>
+    <color name="pantone_btn">#EEAB00</color>
+    <color name="gray_zentros">#505050</color>
+    <color name="black_zentros">#4A4A4A</color>
+    <color name="red_zentros">#C4314B</color>
+    <color name="solid_zentros">#27656D</color>
+    <color name="transparent_card">#BCFFFFFF</color>
+
+    <color name="dom_yanapa">#5EBDB2</color>
+    <color name="blue_yanapa">#142B3B</color>
+    <color name="orange_solid_yanapa">#E47C5D</color>
+    <color name="crema_yanapa">#F0DDAA</color>
+</resources>

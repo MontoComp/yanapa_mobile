@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_mail"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Mail"
+        android:visible="false"
+        app:showAsAction="always"        />
+
+
+
+
+
+    <item android:id="@+id/action_notifications"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Notificaciones"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_send"
+        android:title="Enviar"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_cancel"
+        android:title="Cancelar"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/close_icon"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Mail"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item android:id="@+id/action_folders"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Folders"
+        app:showAsAction="always"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/action_save"
+        android:title="@mipmap/ic_launcher"
+        app:showAsAction="ifRoom"
+        android:visible="false"/>
+
+
+
+    <item
+        android:id="@+id/add_info"
+        android:icon="@mipmap/ic_launcher"
+        android:title="Mail"
+        android:iconTint="@color/green"
+        app:showAsAction="always"
+        android:visible="false"/>
+    <group />
+    <group />
+</menu>

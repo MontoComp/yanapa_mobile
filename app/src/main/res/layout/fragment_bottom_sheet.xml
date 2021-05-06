@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/border_shape_nav_bottom"
+    android:backgroundTint="@color/fondo"
+    android:focusedByDefault="true">
+
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_bottom_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_add_comment"
+                android:layout_gravity="center"
+                app:tint="@color/white">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_deafault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nuevo comentario"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_black_italic"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="20dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Proyecto"
+                                android:textSize="17sp"
+                                android:textColor="@color/black"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_marginVertical="5dp"
+                                android:gravity="center|start">
+
+                            </TextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_shape_input"
+                                android:layout_marginHorizontal="15dp"
+                                android:elevation="5dp">
+                                <Spinner
+                                    android:id="@+id/sp_projects"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingHorizontal="5dp">
+                                </Spinner>
+                            </LinearLayout>
+
+                            <!--<EditText
+                                android:id="@+id/et_project_forum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_shape_input"
+                                android:layout_marginHorizontal="15dp"
+                                android:inputType="text"
+                                android:maxLength="16"
+                                android:paddingVertical="10dp"
+                                android:paddingHorizontal="5dp"
+                                android:elevation="5dp">
+
+                            </EditText>-->
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Nombre"
+                                android:textSize="17sp"
+                                android:textColor="@color/black"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_marginVertical="5dp"
+                                android:gravity="center|start">
+
+                            </TextView>
+
+                            <EditText
+                                android:id="@+id/et_name_forum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_shape_input"
+                                android:layout_marginHorizontal="15dp"
+                                android:inputType="text"
+                                android:maxLength="75"
+                                android:maxLines="1"
+                                android:paddingVertical="10dp"
+                                android:paddingHorizontal="5dp"
+                                android:elevation="5dp">
+
+                            </EditText>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Comentario"
+                                android:textSize="17sp"
+                                android:textColor="@color/black"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_marginVertical="5dp"
+                                android:gravity="center|start">
+
+                            </TextView>
+
+                            <EditText
+                                android:id="@+id/et_comment_forum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_shape_input"
+                                android:layout_marginHorizontal="15dp"
+                                android:inputType="textMultiLine"
+                                android:maxLength="255"
+                                android:paddingVertical="10dp"
+                                android:paddingHorizontal="5dp"
+                                android:elevation="5dp">
+
+                            </EditText>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <include layout="@layout/common_waiting" />
+
+                            </FrameLayout>
+
+                            <Button
+                                android:id="@+id/btn_send_comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:text="Enviar"
+                                android:background="@drawable/border_shape_btn_pantone"
+                                android:backgroundTint="@color/orange_solid_yanapa"
+                                android:layout_marginTop="25dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginHorizontal="15dp"
+                                android:layout_gravity="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="22sp">
+
+                            </Button>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp">
+
+                            </View>
+
+
+
+
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

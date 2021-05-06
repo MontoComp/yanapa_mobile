@@ -1,0 +1,122 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/dom_yanapa</item>
+        <item name="colorAccent">@color/dom_yanapa</item>
+    </style>
+
+
+
+    <!-- Login Styles -->
+    <style name="TextAppearance.AppCompat.TextInputLayout.FloatingLabel" parent="@android:style/TextAppearance">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="LoginEditText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textCursorDrawable">@color/blue_zentros</item>
+    </style>
+
+    <style name="AppTheme.LoginTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/dark_black</item>
+    </style>
+
+    <style name="BigTitle">
+        <item name="android:textSize">27sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Subtitle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/gray_subtitle</item>
+    </style>
+
+    <style name="Subtitle.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Subtitle.DarkGray">
+        <item name="android:textColor">@color/dark_gray</item>
+    </style>
+
+    <style name="QuestionTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/dark_black</item>
+    </style>
+
+    <style name="QuestionNumber">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyleBottom" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/border_shape_nav_bottom</item>
+    </style>
+
+    <style name="QuestionnaireBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Subtitle.Blue">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/blue_status</item>
+    </style>
+
+    <style name="TabWidget">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="mySpinnerItemStyle">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- línea inferior -->
+        <item name="boxStrokeColor">@color/white</item>
+        <!-- el color de relleno, (por defecto es colorOnSurface)-->
+        <item name="boxBackgroundColor">@color/white</item>
+        <!-- el hint cuando el campo está vacio y sin foco-->
+        <item name="android:textColorHint">@color/blue_zentros</item>
+        <!-- el hint cuando se convierte en etiqueta flotante-->
+        <item name="hintTextColor">@color/white</item>
+    </style>
+
+    <style name="myTextNagigationView">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/blue_zentros</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+</resources>

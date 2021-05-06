@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/Home"
+            android:title="Inicio"
+            android:icon="@drawable/home"
+            android:iconTint="@color/blue_zentros"
+            />
+
+    </group>
+    <group android:id="@+id/group2">
+        <item
+            android:id="@+id/Permit"
+            android:title="Permisos"
+            android:icon="@drawable/permit_home"
+            android:iconTint="@color/blue_zentros"
+            />
+    </group>
+    <group android:id="@+id/group3">
+        <item
+            android:id="@+id/Requests"
+            android:title="Solicitudes"
+            android:icon="@drawable/request_home"
+            android:iconTint="@color/blue_zentros"
+            />
+
+    </group>
+    <group android:id="@+id/group4">
+        <!--<item
+                    android:id="@+id/Transits"
+                    android:title="@string/transits"
+                    android:icon="@drawable/ic_location_on"
+                    />-->
+
+        <item
+            android:id="@+id/Profile"
+            android:title="Perfil"
+            android:icon="@drawable/profile_home"
+            android:iconTint="@color/blue_zentros"
+            />
+
+    </group>
+    <group android:id="@+id/group5">
+        <!--<item
+                    android:id="@+id/Map"
+                    android:title="@string/map"
+                    android:icon="@drawable/ic_map"
+                    />-->
+        <item
+            android:id="@+id/Information"
+            android:title="Información"
+            android:icon="@drawable/sbe_home"
+            android:iconTint="@color/blue_zentros"
+            />
+
+    </group>
+    <group android:id="@+id/group6">
+        <item
+            android:id="@+id/logout"
+            android:title="Cerrar sesión"
+            android:icon="@drawable/ic_exit_to_app"
+            android:iconTint="@color/blue_zentros"
+            />
+    </group>
+</menu>

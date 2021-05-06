@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/common_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimaryDark"
+    app:titleTextColor="@android:color/white"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/Toolbar.TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:textSize="21sp"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/info_common"
+            android:gravity="center|start" />
+
+        <ImageView
+            android:id="@+id/info_common"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_icon_info"
+            android:visibility="invisible"/>
+
+        <!--<include
+            android:id="@+id/mail_image_badge"
+            layout="@layout/not_read_mails"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toStartOf="@+id/alert_icon_toolbar_empty"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <include
+            android:id="@+id/mail_image_badge_empty"
+            layout="@layout/not_read_mails_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toStartOf="@+id/alert_icon_toolbar_empty"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <include
+            android:id="@+id/alert_icon_toolbar"
+            layout="@layout/alerts_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <include
+            android:id="@+id/alert_icon_toolbar_empty"
+            layout="@layout/alerts_empty_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />-->
+
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.Toolbar>

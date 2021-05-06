@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusedByDefault="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/btn_save_project">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/common_layout_back"></include>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/border_shape_input"
+                    app:boxStrokeColor="@color/dom_yanapa"
+                    app:hintTextColor="@color/dom_yanapa"
+                    android:textColorHint="@color/dom_yanapa"
+                    android:theme="@style/AppTheme.LoginTheme"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.TextInputLayout.FloatingLabel"
+                    android:elevation="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_project"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:hint="Proyecto"
+                        android:textColor="@color/gray_zentros"
+                        android:textColorHint="@color/gray_zentros"
+                        android:drawableEnd="@drawable/ic_folder_special"
+                        android:drawableTint="@color/dom_yanapa"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/border_shape_input"
+                    app:boxStrokeColor="@color/dom_yanapa"
+                    app:hintTextColor="@color/dom_yanapa"
+                    android:textColorHint="@color/dom_yanapa"
+                    android:theme="@style/AppTheme.LoginTheme"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.TextInputLayout.FloatingLabel"
+                    android:elevation="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_manager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPersonName"
+                        android:hint="Encargado"
+                        android:drawableEnd="@drawable/ic_assignment"
+                        android:drawableTint="@color/dom_yanapa"
+                        android:textColor="@color/gray_zentros"
+                        android:textColorHint="@color/gray_zentros"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_dni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/border_shape_input"
+                    app:boxStrokeColor="@color/dom_yanapa"
+                    app:hintTextColor="@color/dom_yanapa"
+                    android:textColorHint="@color/dom_yanapa"
+                    android:theme="@style/AppTheme.LoginTheme"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.TextInputLayout.FloatingLabel"
+                    android:elevation="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_dni"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:hint="Dni"
+                        android:drawableEnd="@drawable/ic_fact_check"
+                        android:drawableTint="@color/dom_yanapa"
+                        android:textColor="@color/gray_zentros"
+                        android:textColorHint="@color/gray_zentros"
+                        android:lines="1"
+                        android:maxLength="8"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/border_shape_input"
+                    app:boxStrokeColor="@color/dom_yanapa"
+                    app:hintTextColor="@color/dom_yanapa"
+                    android:textColorHint="@color/dom_yanapa"
+                    android:theme="@style/AppTheme.LoginTheme"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.TextInputLayout.FloatingLabel"
+                    android:elevation="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPostalAddress"
+                        android:hint="Dirección"
+                        android:drawableEnd="@drawable/ic_place"
+                        android:drawableTint="@color/dom_yanapa"
+                        android:textColor="@color/gray_zentros"
+                        android:textColorHint="@color/gray_zentros"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/border_shape_input"
+                    app:boxStrokeColor="@color/dom_yanapa"
+                    app:hintTextColor="@color/dom_yanapa"
+                    android:textColorHint="@color/dom_yanapa"
+                    android:theme="@style/AppTheme.LoginTheme"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.TextInputLayout.FloatingLabel"
+                    android:elevation="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPostalAddress"
+                        android:hint="Lugar"
+                        android:drawableEnd="@drawable/ic_place"
+                        android:drawableTint="@color/dom_yanapa"
+                        android:textColor="@color/gray_zentros"
+                        android:textColorHint="@color/gray_zentros"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:background="@drawable/border_shape_input"
+                    app:boxStrokeColor="@color/dom_yanapa"
+                    app:hintTextColor="@color/dom_yanapa"
+                    android:textColorHint="@color/dom_yanapa"
+                    android:theme="@style/AppTheme.LoginTheme"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.TextInputLayout.FloatingLabel"
+                    android:elevation="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:hint="Teléfono"
+                        android:drawableEnd="@drawable/ic_phone"
+                        android:drawableTint="@color/dom_yanapa"
+                        android:textColor="@color/gray_zentros"
+                        android:textColorHint="@color/gray_zentros"
+                        android:lines="1"
+                        android:maxLength="9"
+                        android:maxLines="1"
+                        android:singleLine="true"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp">
+
+                </View>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save_project"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/border_shape_btn_pantone"
+        android:backgroundTint="@color/orange_solid_yanapa"
+        android:text="Guardar"
+        android:fontFamily="@font/roboto_bold"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/white" />
+</RelativeLayout>

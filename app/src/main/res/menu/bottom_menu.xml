@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="@color/dom_yanapa">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio"
+        app:cnb_iconColor="@color/blue_yanapa"/>
+    <item
+        android:id="@+id/people"
+        android:icon="@drawable/ic_person_search"
+        android:title="Consultas"
+        app:cnb_iconColor="@color/blue_yanapa"/>
+    <item
+        android:id="@+id/projects"
+        android:icon="@drawable/ic_folder_special"
+        android:title="Proyectos"
+        app:cnb_iconColor="@color/blue_yanapa" />
+    <item
+        android:id="@+id/forum"
+        android:icon="@drawable/ic_forum"
+        android:title="Foro"
+        app:cnb_iconColor="@color/blue_yanapa" />
+</menu>
