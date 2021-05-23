@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="end|center">
+
+        <ImageView
+            android:id="@+id/close_dialog_filter_people"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="end|center"
+            android:padding="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/ic_close"
+            android:backgroundTint="@color/dark_gray">
+
+        </ImageView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_diagnostics360"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingVertical="10dp"
+        android:gravity="start|center"
+        android:paddingHorizontal="20dp"
+        android:textSize="22dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Configure su búsqueda de información"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/et_district_people"
+        android:background="@drawable/border_shape_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
+        android:imeOptions="actionDone"
+        android:hint="Distrito"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="10dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:elevation="5dp">
+
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:gravity="start"
+        android:paddingHorizontal="20dp"
+        android:textSize="18sp"
+        android:text="Gráficos:"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp">
+        <RadioButton
+            android:id="@+id/rb_bar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Barras">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rb_pie"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Pie">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rb_radar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Radar">
+
+        </RadioButton>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_send_filter"
+        android:background="@drawable/border_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:text="Enviar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp"/>
+
+</LinearLayout>

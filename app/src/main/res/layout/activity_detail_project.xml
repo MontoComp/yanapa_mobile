@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusedByDefault="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/fab_donate">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <include layout="@layout/common_layout_back"></include>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="fitXY"
+                        android:alpha="0.75"
+                        android:src="@drawable/fondo_home_yanapa"></ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_name_project"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginHorizontal="7dp"
+                        android:gravity="center"
+                        android:text="Proyecto1"
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginBottom="25dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="15dp">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:padding="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/cl_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toTopOf="@+id/cl_2">
+
+                                <RelativeLayout
+                                    android:id="@+id/relativeLayout"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="center"
+                                        android:src="@color/blue_yanapa">
+
+
+                                    </de.hdodenhof.circleimageview.CircleImageView>
+
+                                    <TextView
+                                        android:id="@+id/tv_manager_project"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:gravity="center"
+                                        android:text="D"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="30sp"
+                                        android:textStyle="bold">
+
+
+                                    </TextView>
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_name_user_project"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="10dp"
+                                    android:text="Name"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toTopOf="@+id/tv_address_project"
+                                    app:layout_constraintEnd_toStartOf="@+id/imageView"
+                                    app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_address_project"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:drawableLeft="@drawable/ic_location_on"
+                                    android:drawablePadding="5dp"
+                                    android:drawableTint="@color/dom_yanapa"
+                                    android:text="Address"
+                                    android:textColor="@color/black"
+                                    android:textSize="17sp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/imageView"
+                                    app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+                                    app:layout_constraintTop_toBottomOf="@id/tv_name_user_project" />
+
+                                <ImageButton
+                                    android:id="@+id/imageView"
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginVertical="10dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/ic_circle"
+                                    android:backgroundTint="@color/white"
+                                    android:src="@drawable/ic_call"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintCircleRadius="100dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/light_green_rhs">
+
+
+                                </ImageButton>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/cl_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@+id/cl_1"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/tv_1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="10dp"
+                                    android:text="Dni"
+                                    android:textSize="16sp"
+                                    app:layout_constraintEnd_toStartOf="@+id/tv_2"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_dni_project"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="Dni"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="@+id/tv_1"
+                                    app:layout_constraintStart_toStartOf="@+id/tv_1"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+                                <TextView
+                                    android:id="@+id/tv_2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="10dp"
+                                    android:text="Celular"
+                                    android:textSize="16sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/tv_1"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_phone_project"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="Celular"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="@+id/tv_2"
+                                    app:layout_constraintStart_toStartOf="@+id/tv_2"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_2" />
+
+                                <TextView
+                                    android:id="@+id/tv_3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="Correo electrónico"
+                                    android:textSize="16sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_dni_project" />
+
+                                <TextView
+                                    android:id="@+id/tv_mail_project"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:paddingLeft="10dp"
+                                    android:text="Correo electrónico"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="@+id/tv_3"
+                                    app:layout_constraintStart_toStartOf="@+id/tv_3"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_3" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_donate"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center|bottom"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription=""
+        android:src="@drawable/ic_monetization"
+        android:tint="@color/white"
+        app:backgroundTint="@color/dom_yanapa"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:maxImageSize="30dp" />
+
+</RelativeLayout>

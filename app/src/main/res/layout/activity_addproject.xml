@@ -154,7 +154,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/input_layout_place"
+                    android:id="@+id/input_layout_mail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -168,14 +168,14 @@
                     android:elevation="5dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_place"
+                        android:id="@+id/et_mail"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:paddingHorizontal="10dp"
                         android:imeOptions="actionDone"
                         android:inputType="textPostalAddress"
-                        android:hint="Lugar"
-                        android:drawableEnd="@drawable/ic_place"
+                        android:hint="Correo electrónico"
+                        android:drawableEnd="@drawable/ic_mail_outline"
                         android:drawableTint="@color/dom_yanapa"
                         android:textColor="@color/gray_zentros"
                         android:textColorHint="@color/gray_zentros"

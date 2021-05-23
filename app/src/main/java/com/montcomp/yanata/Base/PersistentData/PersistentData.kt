@@ -74,8 +74,8 @@ enum class Keys {
     //https://remotehs-ar.ehcos.com/remotehs-web/pages/public/main/index.zul?entity=defaultEntity //QA
 
     enum class UrlBase(var value: String){
-        //URL("https://remotehs-es.ehcos.com/")
-        URL("http://10.0.2.2:3000/")
+        URL("http://192.168.1.4:3000/")
+        //URL("http://10.0.2.2:3000/")
         //URL("http://192.168.243.20:6083/api/v1/")
     }
     enum class Parasarchivos(var value:String) {

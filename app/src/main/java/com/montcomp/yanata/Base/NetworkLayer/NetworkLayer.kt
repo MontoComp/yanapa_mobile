@@ -118,7 +118,6 @@ interface APIService {
     )
     fun mypostssend(@Body request: ProjectsRequest): Observable<Any>
 
-
     @GET("forum")
     fun myforum(): Observable<List<ForumResponse>>
 
@@ -129,8 +128,10 @@ interface APIService {
     )
     fun mypostforum(@Body request: ForumRequest): Observable<Any>
 
-
     @GET("posts")
     fun myprojectsnames(): Observable<List<ProjectsResponse>>
+
+    @GET("people/{district}")
+    fun mydistrict(@Path("district") district: String): Observable<List<PeopleResponse>>
 
 }

@@ -40,18 +40,6 @@ class HomeFragment() : Fragment(){
                               savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
-        view.findViewById<ConstraintLayout>(R.id.cly_home_home).setOnClickListener {
-
-        }
-        view.findViewById<ConstraintLayout>(R.id.cly_home_inquiries).setOnClickListener {
-
-        }
-        view.findViewById<ConstraintLayout>(R.id.cly_home_projects).setOnClickListener {
-
-        }
-        view.findViewById<ConstraintLayout>(R.id.cly_home_forum).setOnClickListener {
-
-        }
         return view
     }
 

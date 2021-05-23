@@ -43,7 +43,7 @@ class AddProjectActivity : DisposableActivity() , AddProjectPresenterToViewProto
         var manager = findViewById<TextInputEditText>(R.id.et_manager) as EditText
         var dni = findViewById<TextInputEditText>(R.id.et_dni) as EditText
         var address = findViewById<TextInputEditText>(R.id.et_address) as EditText
-        var place = findViewById<TextInputEditText>(R.id.et_place) as EditText
+        var mail = findViewById<TextInputEditText>(R.id.et_mail) as EditText
         var phone = findViewById<TextInputEditText>(R.id.et_phone) as EditText
 
         val toolbarTitle = this.findViewById(R.id.toolbar_title_back)  as TextView?
@@ -60,7 +60,7 @@ class AddProjectActivity : DisposableActivity() , AddProjectPresenterToViewProto
                 if(!manager.text.toString().equals("")){
                     if(!address.text.toString().equals("")){
                         if(!phone.text.toString().equals("")){
-                            var mypostproject = ProjectsRequest(title.text.toString(),manager.text.toString(),dni.text.toString().toInt(),address.text.toString(),place.text.toString(),phone.text.toString().toInt())
+                            var mypostproject = ProjectsRequest(title.text.toString(),manager.text.toString(),dni.text.toString().toInt(),address.text.toString(),mail.text.toString(),phone.text.toString().toInt())
 
                             presenter?.validatePostProject(mypostproject)
                         }else{

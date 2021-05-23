@@ -8,7 +8,7 @@ data class ProjectsResponse(
         val manager:String,
         val dni:Int,
         val address: String,
-        val place:String,
+        val email:String,
         val phone:Int
 ): Serializable
 
@@ -17,7 +17,7 @@ data class ProjectsRequest(
         val manager:String,
         val dni:Int,
         val address: String,
-        val place:String,
+        val email:String,
         val phone:Int
 ): Serializable
 

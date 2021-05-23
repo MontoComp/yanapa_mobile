@@ -5,6 +5,7 @@ import java.io.Serializable
 data class PeopleResponse(
         val area: Int,
         val district:String,
+        val stage: String,
         val year:Int,
         val male: Int,
         val female:Int,

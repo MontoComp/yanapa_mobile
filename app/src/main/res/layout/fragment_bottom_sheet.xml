@@ -11,8 +11,6 @@
     android:backgroundTint="@color/fondo"
     android:focusedByDefault="true">
 
-
-
     <RelativeLayout
         android:id="@+id/fragment_bottom_comment"
         android:layout_width="match_parent"

@@ -167,3 +167,4 @@ class MyViewForum(context: Context?) : View(context) {
 
     }
 }
+
