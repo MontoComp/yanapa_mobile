@@ -12,6 +12,7 @@ import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.data.RadarEntry
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.montcomp.yanata.Base.ComonDomain.PeopleResponse
 import com.montcomp.yanata.Base.NetworkLayer.DisposableActivity
@@ -33,13 +34,23 @@ class PieChartActivity:DisposableActivity() , PieChartPresenterToViewProtocol {
         var pieChart = findViewById<PieChart>(R.id.piechart)
         noDocsLayout = findViewById(R.id.no_reports_layout_pie)/////
 
+        var rec_type = intent.getStringExtra("Type")?:"Total"
+
         if (!argument.isNullOrEmpty()){
             listpeople_res=argument
 
             var listpeople = ArrayList<PieEntry>()
 
             for (element in listpeople_res){
-                listpeople.add(PieEntry(element.total.toFloat(),element.year.toString()))
+                if (rec_type.equals("Male")){
+                    listpeople.add(PieEntry(element.male.toFloat(),element.year.toString()))
+                }
+                if (rec_type.equals("Female")){
+                    listpeople.add(PieEntry(element.female.toFloat(),element.year.toString()))
+                }
+                if (rec_type.equals("Total")){
+                    listpeople.add(PieEntry(element.total.toFloat(),element.year.toString()))
+                }
             }
 
             var pieDataSet = PieDataSet(listpeople,"Total People")
@@ -47,7 +58,8 @@ class PieChartActivity:DisposableActivity() , PieChartPresenterToViewProtocol {
             pieDataSet.valueTextColor = Color.BLACK
             pieDataSet.valueTextSize = 16f
 
-            var  pieData =  PieData(pieDataSet)
+            var  pieData =  PieData()
+            pieData.addDataSet(pieDataSet)
 
             pieChart.data = pieData
             pieChart.description.text =  "Pie Chart People"

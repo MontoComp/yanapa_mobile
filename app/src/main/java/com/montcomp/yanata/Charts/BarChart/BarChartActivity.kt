@@ -10,9 +10,11 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.github.mikephil.charting.charts.BarChart
+import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.montcomp.yanata.Base.ComonDomain.PeopleResponse
 import com.montcomp.yanata.Base.NetworkLayer.DisposableActivity
@@ -33,24 +35,64 @@ class BarChartActivity: DisposableActivity(),BarChartPresenterToViewProtocol {
         var barChart = findViewById<BarChart>(R.id.barchart)
         noDocsLayout = findViewById(R.id.no_reports_layout_bar)/////
 
+        var rec_type = intent.getStringExtra("Type")?:"Total"
+
         if (!argument.isNullOrEmpty()){
             listpeople_res=argument
 
-            var listpeople = ArrayList<BarEntry>()
-
-            for (element in listpeople_res){
-                listpeople.add(BarEntry(element.year.toFloat(),element.total.toFloat()))
+            var listpeopletotal = ArrayList<BarEntry>()
+            for (element in 0 until listpeople_res.size){
+                if (rec_type.equals("Male")){
+                    listpeopletotal.add(BarEntry(listpeople_res[element].year.toFloat(),listpeople_res[element].male.toFloat()))
+                }
+                if (rec_type.equals("Female")){
+                    listpeopletotal.add(BarEntry(listpeople_res[element].year.toFloat(),listpeople_res[element].female.toFloat()))
+                }
+                if (rec_type.equals("Total")){
+                    listpeopletotal.add(BarEntry(listpeople_res[element].year.toFloat(),listpeople_res[element].total.toFloat()))
+                }
             }
 
-            var barDataSet = BarDataSet(listpeople,"Total People")
-            barDataSet.colors = ColorTemplate.MATERIAL_COLORS.toMutableList()
-            barDataSet.valueTextColor = Color.BLACK
-            barDataSet.valueTextSize = 16f
+            /*var listpeoplemale = ArrayList<BarEntry>()
+            for (element in 0 until listpeople_res.size){
+                listpeoplemale.add(BarEntry(listpeople_res[element].year.toFloat(),listpeople_res[element].male.toFloat()))
+            }
 
-            var  barData =  BarData(barDataSet)
+            var listpeoplefemale = ArrayList<BarEntry>()
+            for (element in 0 until listpeople_res.size){
+                listpeoplefemale.add(BarEntry(listpeople_res[element].year.toFloat(),listpeople_res[element].female.toFloat()))
+            }*/
+
+            var barDataSettotal = BarDataSet(listpeopletotal,"Total")
+            barDataSettotal.colors = ColorTemplate.MATERIAL_COLORS.toMutableList()
+            //barDataSettotal.color = resources.getColor(R.color.green)
+            barDataSettotal.valueTextColor = Color.BLACK
+            barDataSettotal.valueTextSize = 16f
+
+            /*var barDataSetmale = BarDataSet(listpeoplemale,"Male")
+            //barDataSet.colors = ColorTemplate.MATERIAL_COLORS.toMutableList()
+            barDataSetmale.color = resources.getColor(R.color.blue)
+            barDataSetmale.valueTextColor = Color.BLACK
+            barDataSetmale.valueTextSize = 16f
+
+            var barDataSetfemale = BarDataSet(listpeoplefemale,"Female")
+            //barDataSet.colors = ColorTemplate.MATERIAL_COLORS.toMutableList()
+            barDataSetfemale.color = resources.getColor(R.color.red)
+            barDataSetfemale.valueTextColor = Color.BLACK
+            barDataSetfemale.valueTextSize = 16f*/
+
+
+            var  barData =  BarData()
+            barData.addDataSet(barDataSettotal)
+            /*barData.addDataSet(barDataSetmale)
+            barData.addDataSet(barDataSetfemale)*/
+
 
             barChart.setFitBars(true)
             barChart.data = barData
+
+            barData.barWidth = 0.7f
+            //barChart.groupBars(0f,0.01f,0.05f)
             barChart.description.text =  "Bar Chart People"
             barChart.animateY(2000)
         }else{

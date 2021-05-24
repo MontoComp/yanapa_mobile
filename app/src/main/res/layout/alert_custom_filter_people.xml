@@ -66,6 +66,47 @@
         android:gravity="start"
         android:paddingHorizontal="20dp"
         android:textSize="18sp"
+        android:text="Población:"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="15dp">
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Male">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Female">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/rb_total"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Total">
+
+        </RadioButton>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:gravity="start"
+        android:paddingHorizontal="20dp"
+        android:textSize="18sp"
         android:text="Gráficos:"
         android:textStyle="bold"/>
 

@@ -81,25 +81,43 @@ class PeopleFragment() : Fragment(), PeopleFragmentPresenterToViewProtocol{
             var rb_pie= alertFilterDialog.findViewById<RadioButton>(R.id.rb_pie)
             var rb_radar = alertFilterDialog.findViewById<RadioButton>(R.id.rb_radar)
 
-            rb_bar.isChecked=true
+            var rb_male = alertFilterDialog.findViewById<RadioButton>(R.id.rb_male)
+            var rb_female= alertFilterDialog.findViewById<RadioButton>(R.id.rb_female)
+            var rb_total = alertFilterDialog.findViewById<RadioButton>(R.id.rb_total)
 
+            rb_total.isChecked=true
+            rb_bar.isChecked=true
 
             alertFilterDialog.findViewById<Button>(R.id.btn_send_filter).setOnClickListener {
 
                 if (!et_district.text.toString().equals("")){
+                    var tag = ""
+                    if (rb_male.isChecked){
+                        tag = "Male"
+                    }
+                    if (rb_female.isChecked){
+                        tag = "Female"
+                    }
+                    if (rb_total.isChecked){
+                        tag = "Total"
+                    }
+
                     if (rb_bar.isChecked){
                         val intent = Intent(view.context, BarChartActivity::class.java)
                         intent.putExtra("District",et_district.text.toString())
+                        intent.putExtra("Type",tag)
                         startActivity(intent)
                     }
                     if (rb_pie.isChecked){
                         val intent = Intent(view.context, PieChartActivity::class.java)
                         intent.putExtra("District",et_district.text.toString())
+                        intent.putExtra("Type",tag)
                         startActivity(intent)
                     }
                     if (rb_radar.isChecked){
                         val intent = Intent(view.context, RadarChartActivity::class.java)
                         intent.putExtra("District",et_district.text.toString())
+                        intent.putExtra("Type",tag)
                         startActivity(intent)
                     }
 

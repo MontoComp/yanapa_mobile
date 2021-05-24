@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.github.mikephil.charting.charts.RadarChart
+import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.data.RadarData
 import com.github.mikephil.charting.data.RadarDataSet
 import com.github.mikephil.charting.data.RadarEntry
@@ -34,19 +35,29 @@ class RadarChartActivity: DisposableActivity(), RadarChartPresenterToViewProtoco
         var radarChart = findViewById<RadarChart>(R.id.radarchart)
         noDocsLayout = findViewById(R.id.no_reports_layout_radar)/////
 
+        var rec_type = intent.getStringExtra("Type")?:"Total"
+
         if (!argument.isNullOrEmpty()){
             listpeople_res=argument
 
             var listpeople = ArrayList<RadarEntry>()
 
             for (element in listpeople_res){
-                listpeople.add(RadarEntry(element.total.toFloat()))
+                if (rec_type.equals("Male")){
+                    listpeople.add(RadarEntry(element.male.toFloat()))
+                }
+                if (rec_type.equals("Female")){
+                    listpeople.add(RadarEntry(element.female.toFloat()))
+                }
+                if (rec_type.equals("Total")){
+                    listpeople.add(RadarEntry(element.total.toFloat()))
+                }
             }
 
             var radarDataSet = RadarDataSet(listpeople,"Total People")
             radarDataSet.color = Color.RED
             radarDataSet.lineWidth = 2f
-            radarDataSet.valueTextColor = Color.RED
+            radarDataSet.valueTextColor = Color.BLACK
             radarDataSet.valueTextSize = 14f
 
             var  radarData =  RadarData()
